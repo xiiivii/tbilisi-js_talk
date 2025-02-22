@@ -7,11 +7,12 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
 
-    <title>reveal.js</title>
+    <title>Remember Everything | TbilisiJS Talk</title>
 
     <link rel="stylesheet" href="dist/reset.css" />
     <link rel="stylesheet" href="dist/reveal.css" />
-    <link rel="stylesheet" href="dist/theme/black.css" />
+    <!-- <link rel="stylesheet" href="dist/theme/black.css" /> -->
+    <link rel="stylesheet" href="dist/theme/white.css" />
 
     <!-- Theme used for syntax highlighted code -->
     <link rel="stylesheet" href="plugin/highlight/monokai.css" />
@@ -19,12 +20,1547 @@
   <body>
     <div class="reveal">
       <div class="slides">
-        <section>
-          Slide 1
+        <section data-transition="none">
+          <h2>
+            <div class="vh">Can I</div>
+            <span class="vh">?</span>Remember Everything<span class="vh"
+              >?</span
+            >
+            <div class="vh">&nbsp;</div>
+          </h2>
 
-          <aside class="notes">Shhh, these are your private notes 📝</aside>
+          <div class="fragment author">
+            Oleg Semichev
+            <div class="additional small">
+              <em>Frontend Team Lead @ TradingView</em>
+            </div>
+          </div>
+
+          <aside class="notes">
+            Всем привет, меня зовут Олег и я тим лид. Я кажется должен начать с
+            того, что у меня есть проблема я всё забываю, но все наоборот. Я
+            делаю доклад потому что я ничего не забываю, а вот люди вокруг меня
+            – частенько
+          </aside>
+
+          <style>
+            .author {
+              position: absolute;
+              overflow: hidden;
+              height: 0;
+              margin: 0;
+              left: 0;
+              right: 0;
+            }
+
+            .author.visible {
+              height: auto;
+              text-align: center;
+            }
+          </style>
         </section>
-        <section>Slide 2</section>
+
+        <!-- INTRO -->
+        <section data-transition="none">
+          <section
+            data-transition="none"
+            data-background-image="./assets/memes/arnie-not-happy-remember.jpg"
+            data-background-transition="none"
+          >
+            <h2 class="text-shadow">
+              <div class="fragment" data-fragment-index="1">Can I</div>
+              <span class="vh">?</span>Remember Everything<span
+                class="fragment"
+                data-fragment-index="1"
+                >?</span
+              >
+              <div class="vh">&nbsp;</div>
+            </h2>
+          </section>
+
+          <section data-transition="zoom-in">
+            <h2 class="text-shadow">
+              N&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;O<br />
+              ¯\_(ツ)_/¯
+            </h2>
+          </section>
+
+          <section
+            data-transition="none"
+            data-background-image="./assets/memes/arnie-happy.jpg"
+            data-background-position="-50px center"
+            data-background-size="120%"
+            data-background-opacity=".9"
+            data-background-transition="none"
+          >
+            <h2 class="text-shadow">
+              N&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;O<br />
+              ¯\_(ツ)_/¯
+            </h2>
+          </section>
+
+          <section data-transition="fade">
+            <h4>Who are you, smart-ass?</h4>
+            <img class="r-stretch vh" src="./assets/empty-inbox/1.jpg" />
+
+            <aside class="notes">Это что за умник нашелся</aside>
+          </section>
+
+          <section data-transition="fade">
+            <h4>Who are you, smart-ass?</h4>
+            <img class="r-stretch" src="./assets/empty-inbox/1.jpg" />
+          </section>
+
+          <section data-transition="fade">
+            <h4>Who are you, smart-ass?</h4>
+            <img class="r-stretch" src="./assets/empty-inbox/2.jpg" />
+          </section>
+
+          <section data-transition="fade">
+            <h4>Who are you, smart-ass?</h4>
+            <img class="r-stretch" src="./assets/empty-inbox/3.jpg" />
+          </section>
+
+          <section data-transition="fade">
+            <h4>Who are you, smart-ass?</h4>
+            <img class="r-stretch" src="./assets/empty-inbox/4.jpg" />
+          </section>
+
+          <section data-transition="none">
+            <h4>
+              <div class="fragment">Ah, yeah-yeah, right</div>
+              <div class="fragment">Another talk about productivity</div>
+              <div class="fragment">I get it</div>
+            </h4>
+
+            <div class="fragment fade-left">GTD ZTD BTC ETC?</div>
+            <div class="fragment fade-right">Notion Best Practices?</div>
+            <div class="fragment fade-left">
+              Zettelkasten? Obsidian? Exocortex?
+            </div>
+            <div class="fragment fade-up">No way, is it Pomodoro in 2025?</div>
+          </section>
+
+          <section
+            data-transition="none"
+            data-background-image="./assets/memes/arnie-not-happy-organize.jpg"
+            data-background-transition="none"
+            data-background-color="black"
+          >
+            <h2 class="fragment">
+              <span class="fragment strike">Organize Everything</span>
+            </h2>
+          </section>
+        </section>
+
+        <!-- About -->
+        <section data-transition="none">
+          <section data-transition="slide">
+            <h3>Disclaimer</h3>
+
+            <ol>
+              <li class="fragment">
+                Only my opinion on the subject as a friend
+              </li>
+              <li class="fragment">
+                Only because it lets <em>me</em> "remember everything"
+              </li>
+              <li class="fragment">
+                Only for <em>you</em> to try integrating an approach
+              </li>
+            </ol>
+          </section>
+
+          <section data-transition="slide">
+            <h3>The bait from announcement</h3>
+            <p>
+              <span class="fragment">Another work avalanche?</span>
+              <span class="fragment"
+                >Did you forget to reply to your manager again?</span
+              ><span class="fragment"
+                >Drowning in an endless sea of unread notifications in your
+                inbox, task manager, or corporate chat?</span
+              >
+              <span class="fragment"
+                >There’s an old tried-and-true method. Tasks will resolve
+                themselves into a tangled mess, all you need is…</span
+              >
+            </p>
+
+            <aside class="notes">
+              А поднимите руки те, кто вообще читает эти анонсы?<br />
+              Юлия, зафиксируйте факт, пожалуйста
+            </aside>
+          </section>
+
+          <section>
+            <img class="r-stretch" src="assets/memes/three.jpg" alt="" />
+            <p>I have three answers for you</p>
+          </section>
+        </section>
+
+        <!-- ANSWER #1 -->
+        <section data-transition="none">
+          <section data-transition="none">
+            <div class="fragment none r-fit-text">ANSWER #1</div>
+            <div class="fragment none r-fit-text">
+              <span class="magic">METHODICAL</span>
+            </div>
+          </section>
+
+          <section data-transition="slide">
+            <h2>
+              <div class="fragment none">Just</div>
+              <div class="fragment none">Write</div>
+              <div class="fragment none">Everything</div>
+              <div class="fragment none">Down</div>
+            </h2>
+
+            <img
+              style="transform: scale(1.3)"
+              class="fragment"
+              src="https://i.pinimg.com/originals/ec/61/32/ec6132dbf618803d791ac19b6b2f21f8.gif"
+              alt=""
+            />
+          </section>
+
+          <section data-transition="slide">
+            <p>
+              <span class="fragment">Write</span>
+              <span class="fragment">Everything</span
+              ><span class="fragment">-Everything</span>
+              <span class="fragment">Down</span>
+            </p>
+
+            <h2 class="fragment" style="font-size: 5em">
+              <span class="magic">WEED</span>
+            </h2>
+
+            <img
+              class="fragment"
+              style="transform: scale(1.5)"
+              src="/assets/memes/huligani.gif"
+              alt=""
+            />
+
+            <aside class="notes">
+              Давайте для пущей важности придумаем удобный акроним
+            </aside>
+          </section>
+
+          <section data-transition="slide">
+            <h2>How to <span class="magic">WEED</span>?</h2>
+
+            <p class="fragment">It (almost) doesn't matter 🤷🏻‍♂️</p>
+
+            <p class="fragment">But there are three <em>must</em>s:</p>
+
+            <ol>
+              <li class="fragment">📝 You <em>must</em> get used to it</li>
+              <li class="fragment">🔄 You <em>must</em> revisit your notes</li>
+              <li class="fragment">🫂 You <em>must</em> trust your notes</li>
+            </ol>
+
+            <aside class="notes">Доверие нужно заслужить</aside>
+          </section>
+
+          <section data-transition="slide">
+            <img class="r-stretch" src="/assets/memes/spread.jpg" alt="" />
+          </section>
+
+          <section data-transition="slide">
+            <h2>Main decisions</h2>
+
+            <br />
+
+            <div style="display: flex; justify-content: center; gap: 3em">
+              <div class="fragment" data-fragment-index="1">
+                <div class="fragment pale" data-fragment-index="4">
+                  ✍️ Analog
+                </div>
+                <div>💻 Digital</div>
+              </div>
+
+              <div class="fragment" data-fragment-index="2">
+                <div>➡️ Simple</div>
+                <div class="fragment pale" data-fragment-index="4">
+                  🔀 Complex
+                </div>
+              </div>
+
+              <div class="fragment" data-fragment-index="3">
+                <div>1️⃣ Single</div>
+                <div class="fragment pale" data-fragment-index="4">
+                  🔢 Multiple
+                </div>
+              </div>
+            </div>
+
+            <br />
+
+            <div class="fragment">Perfect fit for me:</div>
+
+            <img
+              class="fragment"
+              style="transform: scale(0.5); transform-origin: 50% 0"
+              src="./assets/slack-logo.png"
+              alt=""
+            />
+
+            <aside class="notes">
+              Один умный человек сказал, что "бумага нужна для того, чтобы
+              записывать то, что нам нужно запомнить. Мозг же нужен для того
+              чтобы мылсить".
+              <br />
+              Этим человеком был Альберт Эйнштейн. Без шуток.
+              <br />
+              Он и про гугл говорил. ЧТо-то типа не запоминайте то, что можно
+              загуглить или что-то такое. Мировой был мужик
+              <br />
+              Я не буду подвергаться эффекту авторитета и скажу, что запись на
+              бумагу у меня не вызывает доверие, а это важно
+              <br />
+              Для личного ведения дел я ещё не могу сказать, что нашел иделаьный
+              вариант, вероятно я просто разработаю что-то под себя сам, но для
+              работы я сделал выбор в пользу Slack. Но об этом позже.
+              <br />
+              Вы спросите, ты что, дурной, а я отвечу?
+            </aside>
+          </section>
+
+          <section data-transition="slide">
+            <img
+              data-transition="none"
+              class="r-stretch"
+              src="assets/memes/zettelkasten.jpg"
+              alt=""
+            />
+
+            <aside class="notes">Что с лицом обсидианщики?</aside>
+          </section>
+        </section>
+
+        <!-- ANSWER #2 -->
+        <section data-transition="none">
+          <section data-transition="none">
+            <div class="fragment none r-fit-text">ANSWER #2</div>
+            <div class="fragment none r-fit-text">
+              <span class="monster">OPERATIONAL</span>
+            </div>
+          </section>
+
+          <section data-transition="none">
+            <h2>Defeat Inbox</h2>
+
+            <h3 class="fragment">Inbox should <em>always</em> be empty</h3>
+
+            <aside class="notes">
+              Стоит ли говорить еще раз, что помнить всё невозможно, а вот
+              затоптать свой мозг держанием это в голове – легче простого.
+              каждый раз когда вы заходите в инбокс по какому-то делу, и видите
+              кучу всего, это не очень хорошо влияет на вас
+            </aside>
+          </section>
+
+          <section data-transition="slide">
+            <h2>Theoretical basis 🤓</h2>
+
+            <div class="fragment">
+              Inbox<br />
+              ⬇️<br />
+              Processing<br />
+              ⬇️<br />
+              Archive
+            </div>
+
+            <aside class="notes">
+              Теоретическая база имени меня. Приготовьтесь, щас будет сложно
+            </aside>
+          </section>
+
+          <section data-transition="slide">
+            <h2>Inbox</h2>
+
+            <p>Literally any information you receive</p>
+
+            <ul>
+              <li class="fragment" data-fragment-index="1">
+                Instant messages, e-mails, Jira issues
+              </li>
+              <li class="fragment" data-fragment-index="2">
+                Colleague's or manager's verbal question
+              </li>
+              <li class="fragment" data-fragment-index="3">
+                Reminders
+                <span class="fragment" data-fragment-index="4"
+                  >(postponed inbox)</span
+                >
+              </li>
+              <li class="fragment" data-fragment-index="5">
+                <span class="fragment pale" data-fragment-index="8"
+                  >YouTube video, Medium article, book, podcast</span
+                >
+              </li>
+              <li class="fragment" data-fragment-index="6">
+                <span class="fragment pale" data-fragment-index="8"
+                  >Mom's call, friend's invitation</span
+                >
+              </li>
+              <li class="fragment" data-fragment-index="7">
+                <span class="fragment pale" data-fragment-index="8"
+                  >Self thoughts</span
+                >
+              </li>
+            </ul>
+
+            <style>
+              .fragment.pale {
+                visibility: visible !important;
+                opacity: 1 !important;
+              }
+
+              .fragment.pale.visible {
+                opacity: 0.25 !important;
+              }
+            </style>
+
+            <aside class="notes">
+              Миша ПокрЫщенко и его доклад на одном из прошлых TbiJS
+            </aside>
+          </section>
+
+          <section>
+            <a
+              class="caption-link"
+              href="https://www.youtube.com/watch?v=Rezn0WQtJuE"
+              target="_blank"
+            >
+              Mikhail Pokryshchenko — «Why should you write?» @ Tbilisi JS Conf
+              on June 2024
+            </a>
+            <img class="r-stretch" src="assets/talks/misha.jpg" alt="" />
+
+            <aside class="notes">
+              Кстати, он планирует еще доклады по зетелКАСТЕНУ, кому эта тема
+              близка
+            </aside>
+          </section>
+
+          <section data-transition="slide">
+            <h2>Processing</h2>
+
+            <p>Everything you need to do with the inbox</p>
+
+            <ol>
+              <li class="fragment">
+                If it's relevant
+                <ol>
+                  <li class="fragment">Determine responsibility</li>
+                  <li class="fragment">Determine deadline</li>
+                  <li class="fragment">Prioritize</li>
+                  <li class="fragment">
+                    <span class="magic">WEED</span>
+                  </li>
+                  <li class="fragment">Get done (eventually)</li>
+                </ol>
+              </li>
+
+              <li class="fragment">
+                If not
+                <ol>
+                  <li class="fragment">Skip</li>
+                  <li class="fragment">Redirect</li>
+                </ol>
+              </li>
+            </ol>
+          </section>
+
+          <section data-transition="slide">
+            <h2>Archive</h2>
+
+            <p>Everything that has resolution</p>
+
+            <ol>
+              <li class="fragment">Done</li>
+              <li class="fragment">Cancelled</li>
+              <li class="fragment">Skipped</li>
+            </ol>
+          </section>
+
+          <section data-transition="slide">
+            <img class="r-stretch" src="./assets/memes/thats-all.png" alt="" />
+          </section>
+
+          <section data-transition="none">
+            <h2 class="fragment">Why <em>defeating</em>?</h2>
+
+            <h3 class="fragment">
+              Because <span class="monster">Inbox</span> is a scary monster
+            </h3>
+          </section>
+
+          <section
+            class="non-printable"
+            data-transition="none"
+            data-background-image="./assets/hydra.jpeg"
+          ></section>
+
+          <section
+            data-transition="fade"
+            data-background-image="./assets/hydra.jpeg"
+          >
+            <h2 class="text-shadow">
+              Multi-headed noisy <br />externally omnipresent entity
+            </h2>
+
+            <aside class="notes">
+              Штука про лернейскую гидру и авгиевы конюшни
+            </aside>
+          </section>
+
+          <section
+            data-transition="none"
+            data-background-image="./assets/memes/commando.webp"
+          >
+            <h2 class="text-shadow">
+              Multi-headed noisy <br />externally omnipresent entity
+            </h2>
+          </section>
+
+          <section data-transition="none">
+            <h2 class="text-shadow">
+              Multi-headed
+              <span class="fragment pale"
+                >noisy <br />externally omnipresent entity</span
+              >
+            </h2>
+          </section>
+
+          <section data-transition="slide">
+            <h3>Divide work and personal space</h3>
+
+            <ol>
+              <li class="fragment">Another place</li>
+              <li class="fragment">Another device</li>
+              <li class="fragment">Another profile on main device</li>
+              <li class="fragment">Another profile on mobile device</li>
+              <li class="fragment">Another profile in browser</li>
+            </ol>
+          </section>
+
+          <section data-transition="slide">
+            <h2 data-fragment-index="0" class="fragment">
+              <s class="fragment pale" data-fragment-index="1">Multi-headed</s>
+              noisy
+              <span class="fragment pale" data-fragment-index="1"
+                ><br />externally omnipresent entity</span
+              >
+            </h2>
+          </section>
+
+          <section data-transition="slide">
+            <h3>Turn off notifications</h3>
+            <h3 class="fragment fade-up">Yes, almost completely</h3>
+            <h3 class="fragment fade-up">It's 80% of success</h3>
+            <h3 class="fragment fade-up">I am not kidding</h3>
+          </section>
+
+          <section data-transition="slide">
+            <h2>Why turning them off?</h2>
+
+            <div class="master-of-time fragment">
+              <div class="master-of-time-inner">
+                <img src="./assets/memes/master-of-time.webp" alt="" />
+              </div>
+            </div>
+
+            <style>
+              .master-of-time {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 500px;
+                transform: scale(1);
+              }
+
+              .master-of-time.visible {
+                transform: scale(2);
+              }
+
+              .master-of-time-inner {
+                position: relative;
+              }
+
+              .master-of-time-inner:after {
+                content: "TIME";
+                position: absolute;
+                bottom: 0;
+                font-size: 0.4em;
+                color: white;
+                background-color: black;
+                bottom: 15%;
+                right: 13%;
+                padding: 0px 2px 0 4px;
+                letter-spacing: 4px;
+              }
+            </style>
+          </section>
+
+          <section data-transition="slide">
+            <ol>
+              <li class="fragment">Helps you to fight FOMO</li>
+              <li class="fragment">Prevents brain power drainage</li>
+              <li class="fragment">May even protect your personal stuff</li>
+              <li class="fragment">
+                And (I believe) leads to a happier and calmer life overall*
+                <div class="fragment">
+                  <div class="additional">
+                    also may lead to every-minute-checking-everything<br />
+                    obsession, please consult with a specialist
+                  </div>
+                </div>
+              </li>
+            </ol>
+          </section>
+
+          <section data-transition="slide">
+            <h2>
+              <s class="fragment pale" data-fragment-index="1"
+                >Multi-headed noisy</s
+              >
+              <br />externally omnipresent
+              <span class="fragment pale" data-fragment-index="1">entity</span>
+            </h2>
+          </section>
+
+          <section data-transition="slide">
+            <h3>Narrow the streams<br />or just filter them</h3>
+
+            <p class="fragment">
+              Almost every service have e-mail notifications<br />about
+              completed actions
+            </p>
+
+            <p class="fragment">For starters, you can rely on it</p>
+
+            <p class="fragment">
+              Also, not everything you subscribed matters a lot
+            </p>
+          </section>
+
+          <section data-transition="slide">
+            <h2>
+              <s>Multi-headed noisy <br />externally omnipresent entity</s>
+            </h2>
+          </section>
+        </section>
+
+        <!-- Summary after two ANSWERS -->
+        <section data-transition="none">
+          <section data-transition="fade">
+            <img class="r-stretch" src="./assets/memes/happy-sad-bus.jpg" />
+
+            <aside class="notes">
+              <p>
+                Ответ номер 1 – методический и ответ номер 2 операционный дают
+                нам следующий результат
+              </p>
+
+              Кто уже свыкся с этой мыслью – у меня хорошие новости, вам не
+              нужны какие-то сложные механизмы, почти всё есть уже из коробки
+              сервисов, которыми вы пользуетесь.
+            </aside>
+          </section>
+
+          <section
+            data-background="./assets/inbox-taming/1.jpg"
+            data-background-size="contain"
+            data-background-transition="fade"
+          ></section>
+
+          <section
+            data-background="./assets/inbox-taming/2.jpg"
+            data-background-size="contain"
+            data-background-transition="fade"
+          ></section>
+
+          <section
+            data-background="./assets/inbox-taming/3.jpg"
+            data-background-size="contain"
+            data-background-transition="fade"
+          ></section>
+
+          <section
+            data-background="./assets/inbox-taming/4.jpg"
+            data-background-size="contain"
+            data-background-transition="fade"
+          ></section>
+
+          <section
+            data-background="./assets/inbox-taming/5.jpg"
+            data-background-size="contain"
+            data-background-transition="fade"
+          ></section>
+        </section>
+
+        <section data-transition="none">
+          <h1 class="fragment">
+            Let's get practical<br /><span
+              style="opacity: 0.2"
+              class="additional"
+              >(and bored)</span
+            >
+          </h1>
+        </section>
+
+        <!-- Vanga -->
+        <section
+          data-transition="none"
+          data-background-image="./assets/memes/vanga.png"
+          data-background-size="contain"
+          data-background-position="0 0"
+          data-background-opacity=".25"
+        >
+          <p class="fragment text-shadow">Telegram</p>
+          <p class="fragment text-shadow">Gmail</p>
+          <p class="fragment text-shadow">Google Calendar</p>
+          <p class="fragment text-shadow">Jira</p>
+          <p class="fragment text-shadow">Slack</p>
+        </section>
+
+        <section data-transition="none">
+          <p>Telegram</p>
+          <p class="fragment pale" data-fragment-index="1">Gmail</p>
+          <p class="fragment pale" data-fragment-index="1">Google Calendar</p>
+          <p class="fragment pale" data-fragment-index="1">Jira</p>
+          <p class="fragment pale" data-fragment-index="1">Slack</p>
+        </section>
+
+        <!-- Telegram -->
+        <section data-transition="none">
+          <div class="fixed small additional non-printable">Telegram</div>
+
+          <section data-transition="slide">
+            <h2>Never use IM for work<br />It always ends badly</h2>
+
+            <p class="fragment">
+              Okay, one exception:<br />
+              <span class="fragment"
+                >Really small and well-organized projects</span
+              >
+            </p>
+
+            <ol>
+              <li class="fragment">Really small</li>
+              <li class="fragment">Really well-organized</li>
+              <li class="fragment">Really projects</li>
+            </ol>
+          </section>
+        </section>
+
+        <section data-transition="fade">
+          <p class="fragment pale" data-fragment-index="1"><s>Telegram</s></p>
+          <p>Gmail</p>
+          <p class="fragment pale" data-fragment-index="1">Google Calendar</p>
+          <p class="fragment pale" data-fragment-index="1">Jira</p>
+          <p class="fragment pale" data-fragment-index="1">Slack</p>
+        </section>
+
+        <!-- Gmail -->
+        <section data-transition="none">
+          <div class="fixed small additional non-printable">Gmail</div>
+
+          <section data-transition="slide">
+            <h1><span class="monster">Inbox</span></h1>
+            <h3 class="fragment fade-up">Once again</h3>
+            <h3 class="fragment fade-up">Inbox should be empty</h3>
+          </section>
+
+          <section data-transition="slide">
+            <div>&nbsp;</div>
+            <img class="r-stretch" src="assets/gmail/0.png" alt="" />
+            <div>&nbsp;</div>
+
+            <aside class="notes">
+              Такой вот инбокс разбирать приятного мало, у кого похоже на что-то
+              такое, поднимите руки
+
+              <br />
+
+              Это моя папка Trash, не то чтобы я хотел кого-то оскорбить, просто
+              это единственный способ эмулировать в своем инбоксе что-то
+              подобное
+            </aside>
+          </section>
+
+          <section data-transition="fade">
+            <div>&nbsp;</div>
+
+            <h3 class="fragment" data-fragment-index="1">
+              Use filters <br />
+              to tame <span class="monster">Inbox</span>
+            </h3>
+
+            <a
+              class="caption-link fragment"
+              href="https://support.google.com/mail/answer/6579"
+              target="_blank"
+              data-fragment-index="2"
+            >
+              Create rules to filter your e-mails
+            </a>
+
+            <img
+              class="fragment non-printable"
+              height="450"
+              src="https://storage.googleapis.com/support-kms-prod/iX6K2R2iBj1PRmgh8C3spScMeDWuAqm8znUk"
+              alt=""
+              data-fragment-index="2"
+            />
+          </section>
+
+          <section data-transition="fade">
+            <div>&nbsp;</div>
+            <img src="./assets/my-labels/1.png" />
+          </section>
+
+          <section data-transition="fade">
+            <div>&nbsp;</div>
+            <img src="./assets/my-labels/2.png" />
+          </section>
+
+          <section data-transition="fade">
+            <div>&nbsp;</div>
+            <img src="./assets/my-labels/3.png" />
+          </section>
+
+          <section data-transition="fade">
+            <div>&nbsp;</div>
+            <img src="./assets/my-labels/4.png" />
+          </section>
+
+          <section data-transition="slide">
+            <h2>Simple tips</h2>
+
+            <ul>
+              <li class="fragment">
+                Apply filters to existing inbox to filter it faster
+              </li>
+              <li class="fragment">
+                Play with the settings to manipulate e-mails more
+              </li>
+              <li class="fragment">
+                Use nested labels if you have many projects or labels
+              </li>
+              <li class="fragment">
+                Add prefixes to visually separate
+                <ul>
+                  <li class="fragment">Secondary inboxes</li>
+                  <li class="fragment">Dumps</li>
+                  <li class="fragment">You name it</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+
+          <section data-transition="slide">
+            <div>&nbsp;</div>
+
+            <h4>
+              Without automation<br />
+              it's the main weapon against
+              <span class="monster">Inbox</span>
+            </h4>
+
+            <img class="r-stretch" src="assets/empty-inbox/2.jpg" alt="" />
+          </section>
+        </section>
+
+        <section data-transition="fade">
+          <p class="fragment pale" data-fragment-index="1"><s>Telegram</s></p>
+          <p class="fragment pale" data-fragment-index="1"><s>Gmail</s></p>
+          <p>Google Calendar</p>
+          <p class="fragment pale" data-fragment-index="1">Jira</p>
+          <p class="fragment pale" data-fragment-index="1">Slack</p>
+        </section>
+
+        <!-- Google Calendar -->
+        <section data-transition="none">
+          <div class="fixed small additional non-printable">
+            Google Calendar
+          </div>
+
+          <section data-transition="slide">
+            <h1>HOT TAKE</h1>
+
+            <h3 class="fragment">
+              Calendar is kinda <span class="magic">WEED</span>
+              <div style="font-size: 2em">🤷🏻‍♂️</div>
+            </h3>
+          </section>
+
+          <section data-transition="slide">
+            <h1>Calendar is a To-Do<br />bound to time</h1>
+          </section>
+
+          <section data-transition="slide">
+            <div>&nbsp;</div>
+
+            <h3>Always add agenda</h3>
+
+            <img class="r-stretch" src="assets/gmail/1.jpg" alt="" />
+
+            <aside class="notes">
+              Иногда агенда такая, что было бы неплохо подготовиться, чтобы не
+              выглядеть так
+            </aside>
+          </section>
+
+          <section data-transition="slide">
+            <div>&nbsp;</div>
+
+            <img
+              class="r-stretch"
+              src="assets/memes/teamlead-flash.jpg"
+              alt=""
+            />
+          </section>
+
+          <section data-transition="slide">
+            <div>&nbsp;</div>
+
+            <h3>Schedule preparation meetings</h3>
+            <div
+              style="
+                left: 0;
+                right: 0;
+                margin-top: -20px;
+                position: absolute;
+                text-align: center;
+              "
+              class="small additional"
+            >
+              (Is that you, Time Blocking?)
+            </div>
+
+            <img class="r-stretch" src="assets/gmail/2.jpg" alt="" />
+
+            <aside class="notes">
+              Неважно вы поставили или на вас – смотрим агенду
+            </aside>
+          </section>
+
+          <section data-transition="slide">
+            <div>&nbsp;</div>
+
+            <h3>Embrace recurring meetings</h3>
+            <div
+              style="
+                left: 0;
+                right: 0;
+                margin-top: -20px;
+                position: absolute;
+                text-align: center;
+              "
+              class="small additional"
+            >
+              (I knew it, Time Blocking!)
+            </div>
+
+            <img class="r-stretch" src="assets/gmail/3.jpg" alt="" />
+          </section>
+
+          <section data-transition="slide">
+            <div>&nbsp;</div>
+
+            <h3>Schedule view</h3>
+
+            <img class="r-stretch" src="assets/gmail/4.jpg" alt="" />
+          </section>
+
+          <section data-transition="slide">
+            <div>&nbsp;</div>
+
+            <h3>Try using daily agenda email</h3>
+            <div
+              style="
+                left: 0;
+                right: 0;
+                margin-top: -20px;
+                position: absolute;
+                text-align: center;
+              "
+              class="small additional"
+            >
+              (Your inbox is clear, right?)
+            </div>
+
+            <img class="r-stretch" src="assets/gmail/5.jpg" alt="" />
+
+            <aside class="notes">
+              Письма выглядят, конечно, очень стремно и мн кажется в Google сами
+              забыли про эту фичу, но оно действительно удобно
+            </aside>
+          </section>
+
+          <section data-transition="slide">
+            <h2>Simple tips</h2>
+
+            <ul>
+              <li class="fragment">
+                Get used to hotkeys (g is <em>the</em> G)
+              </li>
+              <li class="fragment">Set additional timezone</li>
+              <li class="fragment">Set additional calendars</li>
+              <li class="fragment">Set at least approximate working hours</li>
+              <li class="fragment">
+                Tweak reminders time based on your habits
+              </li>
+              <li class="fragment">Hide weekends</li>
+              <li class="fragment">
+                <b>Long story short – get to know settings</b>
+              </li>
+            </ul>
+          </section>
+        </section>
+
+        <section data-transition="fade">
+          <p class="fragment pale" data-fragment-index="1"><s>Telegram</s></p>
+          <p class="fragment pale" data-fragment-index="1"><s>Gmail</s></p>
+          <p class="fragment pale" data-fragment-index="1">
+            <s>Google Calendar</s>
+          </p>
+          <p>Jira</p>
+          <p class="fragment pale" data-fragment-index="1">Slack</p>
+        </section>
+
+        <!-- Jira -->
+        <section data-transition="none">
+          <div class="fixed small additional non-printable">Jira</div>
+
+          <section data-transition="slide">
+            <h2><em>Almost</em> infinite possibilities here</h2>
+
+            <p class="fragment">
+              Let's scratch a surface to find something you can start<br />
+              doing today to make your
+              <span class="magic">WEED</span> life easier
+            </p>
+
+            <aside class="notes">
+              Бой о бой, жиру можно готовить миллионом разных способов. Всё
+              зависит от того, на чем фокусируется ваша компания и есть ли у вас
+              отдельные люди автоматизторы, которые могут сделать для вас
+              условно что угодно
+
+              <br />
+
+              Но я буду рассказывать вещи для самых маленьких и забывчивых, что
+              можно сделать прямо сегодня, чтобы стало лучше. ОЧЕНЬ БЫСТРО
+            </aside>
+          </section>
+
+          <section data-transition="slide">
+            <div>&nbsp;</div>
+
+            <h2>Nu cho narod?</h2>
+
+            <img
+              class="fragment"
+              style="height: 500px"
+              src="/assets/memes/pognali.jpg"
+              alt=""
+            />
+          </section>
+
+          <section data-transition="slide">
+            <div>&nbsp;</div>
+
+            <h2>Components</h2>
+
+            <img class="r-stretch" src="assets/jira/1-components.png" alt="" />
+          </section>
+
+          <section data-transition="slide">
+            <div>&nbsp;</div>
+
+            <h2>Templates</h2>
+
+            <img class="r-stretch" src="assets/jira/2-templates.png" alt="" />
+          </section>
+
+          <section data-transition="slide">
+            <div>&nbsp;</div>
+
+            <h2>Checklists*</h2>
+
+            <img class="r-stretch" src="assets/jira/3-checklists.png" alt="" />
+          </section>
+
+          <section data-transition="slide">
+            <div>&nbsp;</div>
+
+            <h2>Comments</h2>
+
+            <img class="r-stretch" src="assets/jira/4-comments.png" alt="" />
+          </section>
+
+          <section data-transition="slide">
+            <div>&nbsp;</div>
+
+            <h2>Labels and Links</h2>
+
+            <img
+              class="r-stretch"
+              src="assets/jira/5-labels-and-links.png"
+              alt=""
+            />
+          </section>
+
+          <section data-transition="slide">
+            <div>&nbsp;</div>
+
+            <h2>Card Customization*</h2>
+
+            <img class="r-stretch" src="assets/jira/6-cards.png" alt="" />
+          </section>
+
+          <section data-transition="slide">
+            <div>&nbsp;</div>
+
+            <h2>Watchers and Reminders*</h2>
+
+            <img
+              class="r-stretch"
+              src="assets/jira/7-watchers-and-reminders.png"
+              alt=""
+            />
+          </section>
+
+          <section data-transition="slide">
+            <h3>Summary</h3>
+
+            <p class="'fragment">
+              The more reasonable details a task has<br />
+              the more transparent the task is<br />
+              <span class="fragment"
+                ><span class="additional">(duh)</span></span
+              >
+            </p>
+
+            <p class="fragment">
+              But do not overdo it<br />
+              <span class="fragment"
+                ><span class="additional">(duh)</span></span
+              >
+            </p>
+
+            <br />
+
+            <h4 class="fragment">
+              Always keep this in mind<br />
+              doing anything in Jira
+            </h4>
+          </section>
+        </section>
+
+        <section data-transition="fade">
+          <p class="fragment pale" data-fragment-index="1">
+            <s>Telegram</s>
+          </p>
+          <p class="fragment pale" data-fragment-index="1">
+            <s>Gmail</s>
+          </p>
+          <p class="fragment pale" data-fragment-index="1">
+            <s>Google Calendar</s>
+          </p>
+          <p class="fragment pale" data-fragment-index="1">
+            <s>Jira</s>
+          </p>
+          <p>Slack</p>
+        </section>
+
+        <!-- Slack -->
+        <section data-transition="none">
+          <div class="fixed small additional non-printable">Slack</div>
+
+          <section data-transition="slide">
+            <h2><em>Really</em> infinite possibilities here</h2>
+
+            <p class="fragment">
+              Slack is a lot more live company,<br />
+              so let's hope you'll learn something new
+            </p>
+
+            <aside class="notes">
+              В слаке можно сделать еще больше, чем в Jira, и, например, мы в TV
+              фокусируем всё именно в Slack. Но я, опять же, буду рассказывать
+              только о том, что в первую очередь касается работы с инбоксом и, в
+              первую очередь, с фичами из коробки
+            </aside>
+          </section>
+
+          <section data-transition="slide">
+            <h2><span class="monster">Inbox</span> again</h2>
+
+            <ol>
+              <li class="fragment">
+                <b>Cut heads:</b><br />
+                Star the most visited DMs and channels
+                <div style="height: 15px"></div>
+              </li>
+              <li class="fragment">
+                <b>Stop noise:</b><br />
+                Mute or leave all irrelevant channels
+                <div style="height: 15px"></div>
+              </li>
+              <li class="fragment">
+                <b>Contain omnipresence:</b><br />
+                Group, collapse and forget the rest channels
+              </li>
+            </ol>
+          </section>
+
+          <section data-transition="slide">
+            <div>&nbsp;</div>
+
+            <img class="r-stretch" src="assets/slack/1-sidebar.png" alt="" />
+          </section>
+
+          <section data-transition="slide">
+            <div>&nbsp;</div>
+
+            <h3>Save for later</h3>
+
+            <img class="r-stretch" src="assets/slack/2-later.png" alt="" />
+          </section>
+
+          <section data-transition="slide">
+            <div>&nbsp;</div>
+
+            <h3>Thread replies subscription</h3>
+
+            <img
+              class="r-stretch"
+              src="assets/slack/3-threads-notifications.png"
+              alt=""
+            />
+
+            <aside class="notes">
+              Вы нормальные, а ничо что?
+              <br />
+              При отписке не ленитесь написать об этом явно – мол отписываюсь,
+              если что пингуйте снова
+            </aside>
+          </section>
+
+          <section data-transition="slide">
+            <div>&nbsp;</div>
+
+            <h3>
+              <span class="fragment" data-fragment-index="1">😬</span>
+              <span class="fragment strike" data-fragment-index="1">
+                Remind me
+              </span>
+              <span class="fragment" data-fragment-index="1">😬</span>
+            </h3>
+
+            <img class="r-stretch" src="assets/slack/4-remind-me.png" alt="" />
+          </section>
+
+          <section data-transition="slide">
+            <div>&nbsp;</div>
+
+            <h2>Unreads / Threads</h2>
+            <h4 class="fragment">Get ready for the video demonstration</h4>
+          </section>
+
+          <section data-transition="slide">
+            <div>&nbsp;</div>
+
+            <video
+              style="height: 600px"
+              src="./assets/slack/5-unreads.mov"
+            ></video>
+          </section>
+
+          <section data-transition="slide">
+            <h2>Catch Up</h2>
+            <h4 class="fragment">Get ready for the video demonstration</h4>
+          </section>
+
+          <section data-transition="slide">
+            <video
+              style="height: 700px"
+              src="./assets/slack/6-catch-up.mp4"
+            ></video>
+          </section>
+
+          <section data-transition="slide">
+            <div>&nbsp;</div>
+
+            <h3><span class="magic">WEED</span> to yourself</h3>
+
+            <img
+              class="r-stretch"
+              src="assets/memes/spider-double.jpg"
+              alt=""
+            />
+          </section>
+
+          <section data-transition="slide">
+            <h3>Threads are really useful</h3>
+
+            <img class="fragment dm-1" src="assets/self-dm/1.png" alt="" />
+            <img class="fragment dm-2" src="assets/self-dm/2.png" alt="" />
+            <br />
+            <img class="fragment dm-3" src="assets/self-dm/3.png" alt="" />
+
+            <aside class="notes">
+              Мало мне выступления на TbilisiJS, я еще организую внутренний
+              митап для команды
+            </aside>
+
+            <style>
+              .dm-1 {
+                height: 132px;
+              }
+
+              .dm-2 {
+                height: 130px;
+              }
+
+              .dm-3 {
+                height: 145px;
+              }
+            </style>
+          </section>
+
+          <section data-transition="slide">
+            <div>&nbsp;</div>
+
+            <h3>But Canvases are just 🤌🤌🤌</h3>
+
+            <img class="r-stretch" src="assets/slack/7-canvases.png" alt="" />
+
+            <aside class="notes">Лучшее от двух миров – Slack и Notion</aside>
+          </section>
+
+          <section data-transition="slide">
+            <div>&nbsp;</div>
+
+            <img
+              class="r-stretch"
+              src="assets/slack/8-canvases-for-me.png"
+              alt=""
+            />
+          </section>
+
+          <section data-transition="slide">
+            <div>&nbsp;</div>
+
+            <img
+              class="r-stretch"
+              src="assets/slack/9-canvases-for-channels.png"
+              alt=""
+            />
+          </section>
+
+          <section data-transition="slide">
+            <br />
+            <img
+              class="r-stretch"
+              src="assets/slack/10-canvases-in-different-window.png"
+              alt=""
+            />
+          </section>
+
+          <section data-transition="slide">
+            <h2>Summary</h2>
+
+            <ol>
+              <li class="fragment">
+                Tame <span class="monster">Inbox</span> with <b>Catch Up</b> and
+                <b>Unreads</b>
+              </li>
+              <li class="fragment">
+                Master <span class="magic">WEED</span> with <b>Canvases</b>
+              </li>
+              <li class="fragment">
+                Stop tolerating irrelevant channels and threads
+              </li>
+              <li class="fragment">
+                Quit the habit of keeping sidebar piled up
+              </li>
+            </ol>
+          </section>
+
+          <section data-background="assets/memes/angry-smile.png">
+            <h4 class="text-shadow">
+              <span class="fragment"
+                >Try being a person you'd want to work with:</span
+              ><br />
+              <span class="fragment">be transparent, </span>
+              <span class="fragment">reply, </span>
+              <span class="fragment">react, </span
+              ><span class="fragment">communicate</span>
+            </h4>
+          </section>
+        </section>
+
+        <section data-transition="none">
+          <div class="fragment">
+            <p><s>Telegram</s></p>
+            <p><s>Gmail</s></p>
+            <p><s>Google Calendar</s></p>
+            <p><s>Jira</s></p>
+            <p><s>Slack</s></p>
+          </div>
+        </section>
+
+        <!-- ANSWER #3 -->
+        <section data-transition="none">
+          <section data-transition="none">
+            <div class="fragment none r-fit-text">ANSWER #3</div>
+            <div style="font-weight: 900" class="fragment none r-fit-text">
+              EXISTENTIAL
+            </div>
+
+            <aside class="notes">
+              placeholder placeholder placeholder placeholder placeholder
+              placeholder placeholder placeholder placeholder placeholder
+              placeholder placeholder placeholder placeholder placeholder
+              placeholder placeholder placeholder placeholder placeholder
+            </aside>
+          </section>
+
+          <section data-transition="none">
+            <h1 class="fragment none">
+              <span class="vh">?</span>WHY<span class="fragment">?</span>
+            </h1>
+
+            <aside class="notes">Это не акроним, это просто вопрос</aside>
+          </section>
+
+          <section data-transition="none">
+            <img class="fragment" width="200" src="/assets/retro.png" alt="" />
+
+            <aside class="notes">Обсудить идею для доклада</aside>
+          </section>
+
+          <section data-transition="none">
+            <a
+              class="caption-link"
+              href="https://www.youtube.com/watch?v=Rezn0WQtJuE"
+              target="_blank"
+            >
+              Timur Gafiulin – «How a developer can help their team lead grow» @
+              Tbilisi JS Meetup on October 2024
+            </a>
+            <img class="r-stretch" src="assets/talks/timur.jpg" alt="" />
+
+            <aside class="notes">
+              Доклад Тимура ГаФИУлина снова на одном из прошлых TbiJS.
+              Поддерживаю локальный движ, как видите Тимур упустил хорошую
+              возможность добавить следующий слайд
+            </aside>
+          </section>
+
+          <section data-transition="none">
+            <img src="/assets/memes/not-iron-man.jpg" alt="" />
+          </section>
+
+          <section data-transition="none">
+            <img class="r-stretch" src="./assets/things-not-done/1.jpg" />
+          </section>
+
+          <section data-transition="fade">
+            <img class="r-stretch" src="./assets/things-not-done/2.png" />
+          </section>
+
+          <section data-transition="none">
+            <h2>
+              <div class="fragment">How many albums still not listened?</div>
+              <div class="fragment">How many books remain unread?</div>
+              <div class="fragment">How many games are dusting in Steam?</div>
+            </h2>
+            <p class="fragment">
+              <span class="additional">
+                If you only knew how badly I want to finish this talk<br />
+                and go to play the latest update of Hades II
+              </span>
+            </p>
+          </section>
+
+          <section data-transition="none">
+            <img
+              class="brain-meme r-stretch"
+              src="/assets/memes/brain.jpg"
+              alt=""
+            />
+
+            <aside class="notes">
+              Бессовестно своровал картинку у Миши Покрыщенко
+            </aside>
+          </section>
+
+          <section data-transition="fade">
+            <h2 class="fragment" data-fragment-index="0">
+              <div class="fragment" data-fragment-index="1">How can I</div>
+              <span class="vh">?</span>Get Everything Done<span
+                class="fragment"
+                data-fragment-index="1"
+                >?</span
+              >
+              <div class="vh">&nbsp;</div>
+            </h2>
+          </section>
+
+          <section data-transition="fade">
+            <h2>
+              <s>
+                <div>How can I</div>
+                <span class="vh">?</span>Get Everything Done?
+                <div class="vh">&nbsp;</div>
+              </s>
+            </h2>
+          </section>
+        </section>
+
+        <!-- Thank you -->
+        <section data-transition="none">
+          <section
+            data-transition="none"
+            data-background-image="/assets/memes/handshake.avif"
+            data-background-size="120%"
+            data-background-position="0"
+            data-background-transition="none"
+          >
+            <br />
+
+            <div style="font-size: 2.5em" class="magic">Thank you</div>
+
+            <img
+              style="transform: scale(0.75); margin: -1.5em"
+              src="assets/telegram-qr.png"
+              alt=""
+            />
+
+            <style>
+              .thanks {
+                width: 100%;
+                display: flex;
+                gap: 40px;
+                justify-content: space-between;
+                align-items: center;
+              }
+
+              .thanks div {
+                text-align: left;
+              }
+            </style>
+          </section>
+        </section>
       </div>
     </div>
 
@@ -32,6 +1568,99 @@
     <script src="plugin/notes/notes.js"></script>
     <script src="plugin/markdown/markdown.js"></script>
     <script src="plugin/highlight/highlight.js"></script>
+
+    <style>
+      :root {
+        --r-main-font: -apple-system, BlinkMacSystemFont, sans-serif;
+        --r-heading-font: -apple-system, BlinkMacSystemFont, sans-serif;
+        --r-heading-text-transform: initial;
+      }
+
+      .small {
+        font-size: 0.5em;
+      }
+
+      .additional {
+        opacity: 0.5;
+      }
+
+      .text-shadow {
+        --outline-color: white;
+
+        text-shadow: -2px -2px 0 var(--outline-color),
+          2px -2px 0 var(--outline-color), -2px 2px 0 var(--outline-color),
+          2px 2px 0 var(--outline-color), 0 0 10px var(--outline-color) !important;
+      }
+
+      .fragment.none {
+        transition: none !important;
+      }
+
+      .magic {
+        color: gold;
+        -webkit-text-stroke: 0.015em #feac39;
+        font-family: cursive;
+      }
+
+      .magic:before {
+        content: "✨";
+      }
+
+      .magic:after {
+        content: "✨";
+      }
+
+      .monster {
+        color: hsl(1, 96%, 18%);
+        -webkit-text-stroke: 0.025em #fb312d;
+        font-family: fantasy;
+        text-transform: uppercase;
+      }
+
+      .monster:before {
+        content: "👹 ";
+      }
+
+      .monster:after {
+        content: " 👹";
+      }
+
+      .vh {
+        visibility: hidden;
+      }
+
+      .slide-number {
+        font-size: 1em !important;
+      }
+
+      .caption-link {
+        font-size: 0.5em;
+        margin: 0 0 -0.5em;
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .fixed {
+        position: fixed;
+        top: 5%;
+        left: 5%;
+      }
+
+      @media print {
+        :root {
+          --r-main-font: Trebuchet MS, sans-serif;
+          --r-heading-font: Trebuchet MS, sans-serif;
+          --r-heading-text-transform: initial;
+        }
+
+        .non-printable {
+          display: none !important;
+        }
+      }
+    </style>
+
     <script>
       const width = 1280;
 
@@ -39,10 +1668,12 @@
       // - https://revealjs.com/initialization/
       // - https://revealjs.com/config/
       Reveal.initialize({
-        history: false,
+        hash: true,
 
-        hash: false,
-        respondToHashChanges: false,
+        // history: false,
+
+        // hash: false,
+        // respondToHashChanges: false,
 
         width: width,
         height: width * 0.5625,
@@ -50,11 +1681,43 @@
         controls: false,
         progress: false,
 
-        slideNumber: "c/t",
+        autoPlayMedia: true,
+
+        slideNumber: "c",
 
         // Learn about plugins: https://revealjs.com/plugins/
-        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+        plugins: [RevealNotes],
+      });
+
+      Reveal.configure({
+        pdfMaxPagesPerSlide: 1,
+        pdfSeparateFragments: false,
       });
     </script>
+
+    <script>
+      document.querySelectorAll(".caption-link").forEach((element) => {
+        element.innerHTML =
+          `
+          <svg
+            width="24px"
+            height="24px"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M10.975 14.51a1.05 1.05 0 0 0 0-1.485 2.95 2.95 0 0 1 0-4.172l3.536-3.535a2.95 2.95 0 1 1 4.172 4.172l-1.093 1.092a1.05 1.05 0 0 0 1.485 1.485l1.093-1.092a5.05 5.05 0 0 0-7.142-7.142L9.49 7.368a5.05 5.05 0 0 0 0 7.142c.41.41 1.075.41 1.485 0zm2.05-5.02a1.05 1.05 0 0 0 0 1.485 2.95 2.95 0 0 1 0 4.172l-3.5 3.5a2.95 2.95 0 1 1-4.171-4.172l1.025-1.025a1.05 1.05 0 0 0-1.485-1.485L3.87 12.99a5.05 5.05 0 0 0 7.142 7.142l3.5-3.5a5.05 5.05 0 0 0 0-7.142 1.05 1.05 0 0 0-1.485 0z"
+              fill="currentColor"
+            />
+          </svg>
+        ` + element.innerHTML;
+      });
+    </script>
+
+    <script src="socket.io/socket.io.js"></script>
+    <script src="node_modules/reveal-notes-server/client.js"></script>
   </body>
 </html>
