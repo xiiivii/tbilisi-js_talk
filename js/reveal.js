@@ -132,7 +132,7 @@ export default function( revealElement, options ) {
 
 		if( !revealElement ) throw 'Unable to find presentation root (<div class="reveal">).';
 
-		if( initialized ) throw 'Reveal.js has already been initialized.';
+		if( initialized ) return Promise.resolve();
 
 		initialized = true;
 
